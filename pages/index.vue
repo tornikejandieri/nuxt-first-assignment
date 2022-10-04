@@ -12,6 +12,7 @@
       </li>
       <li>Output the product id on the /products/:pid page</li>
     </ol>
+    <button @click="handleClick">Go To Products Page</button>
   </section>
 </template>
 
@@ -21,6 +22,17 @@ import Logo from "~/components/Logo.vue";
 export default {
   components: {
     Logo,
+  },
+  data() {
+    return {
+      products: "/products",
+      pid: "",
+    };
+  },
+  methods: {
+    handleClick() {
+      this.$router.push("/products");
+    },
   },
 };
 </script>
