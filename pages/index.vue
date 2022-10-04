@@ -26,12 +26,11 @@ export default {
   data() {
     return {
       products: "/products",
-      pid: "",
     };
   },
   methods: {
     handleClick() {
-      this.$router.push("/products");
+      this.$router.push(this.products);
     },
   },
 };
